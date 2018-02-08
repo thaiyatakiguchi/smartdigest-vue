@@ -16,7 +16,7 @@
                         @click="submit"
                         :disabled="!valid"
                         >
-                        submitt
+                        submit
                         </v-btn>
                         <v-btn @click="clear">clear</v-btn>
                     </v-form>
