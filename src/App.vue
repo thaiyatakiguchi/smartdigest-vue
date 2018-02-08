@@ -7,15 +7,19 @@
         <router-view/>
       </v-container>
     </v-content>
+    <app-footer></app-footer>
   </v-app>
 </template>
 
 <script>
 import AppDrawer from './components/NavigationDrawer.vue'
+import Footer from './components/Footer'
+
 export default {
   name: 'App',
   components: {
-    'app-drawer': AppDrawer
+    'app-drawer': AppDrawer,
+    'app-footer': Footer
   }
 }
 </script>

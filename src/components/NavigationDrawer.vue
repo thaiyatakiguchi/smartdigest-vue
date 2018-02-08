@@ -4,7 +4,7 @@
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title class="white--text">Smart Digest</v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn icon>
+      <v-btn icon href="/config">
         <v-icon>search</v-icon>
       </v-btn>
       <v-btn icon>
@@ -46,7 +46,7 @@
       </v-list>
       <v-list class="pt-0" dense>
         <v-divider light></v-divider>
-        <v-list-tile v-for="item in items" :key="item.title" :href="item.link">
+        <v-list-tile v-for="item in items" :key="item.title" :href="item.href">
           <v-list-tile-action>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-tile-action>
@@ -65,8 +65,8 @@ export default {
   data: () => ({
     drawer: null,
     items: [
-      {title: 'Frequency Analysis', icon: 'dashboard', link: '/hello'},
-      {title: 'Configuration', icon: 'question_answer', link: '/bye'}
+      {title: 'Frequency Analysis', icon: 'dashboard', href: '/'},
+      {title: 'Configuration', icon: 'question_answer', href: '/config'}
     ],
     mini: false,
     right: null

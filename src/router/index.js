@@ -1,11 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import FrequencyAnalysis from '@/components/FrequencyAnalysis'
-import ChartJs from '@/components/Chartjs'
+import IndexConfig from '@/components/configuration/IndexConfig'
+import CreateConfig from '@/components/configuration/CreateConfig'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -13,9 +15,14 @@ export default new Router({
       component: FrequencyAnalysis
     },
     {
-      path: '/chart',
-      name: 'ChartJs',
-      component: ChartJs
+      path: '/config',
+      name: 'IndexConfig',
+      component: IndexConfig
+    },
+    {
+      path: '/createconfig',
+      name: 'CreateConfig',
+      component: CreateConfig
     }
   ]
 })

@@ -1,11 +1,11 @@
 
 <script>
-import { Line, mixins } from 'vue-chartjs'
+import { Doughnut, mixins } from 'vue-chartjs'
 const { reactiveProp } = mixins
 
 export default {
-  extends: Line,
-  name: 'Chartjs',
+  extends: Doughnut,
+  name: 'DoughnutChart',
   mixins: [reactiveProp],
   mounted () {
     // Overwriting base render method with actual data.
